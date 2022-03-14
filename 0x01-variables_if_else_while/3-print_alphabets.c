@@ -1,10 +1,15 @@
 #include <stdio.h>
-/* printing the alphabet */
+/**
+ * Description: main - print alpahbet in lowercase and uppercase
+ *
+ * Return: ALways 0 (success)
+ */
 
 int main(void)
 {
 	int lw = 'a';
 	int up = 'A';
+
 	while (lw <= 'z')
 	{
 		putchar(lw);
