@@ -1,26 +1,26 @@
-#include<stdio.h>
 #include "main.h"
 
 /**
- * Description: main - print alphabet
+ * print_alphabet - print alphabet lowercase 
  *
  * Return: Always 0 (success)
  */
 
 void print_alphabet(void)
 {
-	int i;
+char alphabet;
 
 
 
-		for (i = 97; i < 123; i++)
+for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 
-					{
+{
 
-								_putchar(i);
+	_putchar(alphabet);
 
-										}
+}
 
-				_putchar('\n');
 
+
+_putchar('\n');
 }
