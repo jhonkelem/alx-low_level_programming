@@ -4,13 +4,11 @@
  * add - add two numbers
  * @a: print int a
  * @b: print int b
- * Return Always 0 (success)
+ * Return: Always 0 (success)
  */
 
-int add (int a, int b)
-
+int add(int a, int b)
 {
-
-	return(a + b);
-
+	return (a + b);
 }
+
