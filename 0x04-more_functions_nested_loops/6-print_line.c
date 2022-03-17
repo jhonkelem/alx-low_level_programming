@@ -1,15 +1,14 @@
 #include "main.h"
 
 /**
- * print_line - draw a straight line in the terminal
- *
+ * print_line: write a function that draws a straight line in the terminal
+ * @n: print int
  * Return: Always 0 (success)
  */
 
 void print_line(int n)
 
 {
-
 
 	int i;
 
@@ -42,5 +41,6 @@ void print_line(int n)
 		_putchar ('\n');
 
 	}
-
 }
+
+
