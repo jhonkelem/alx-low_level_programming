@@ -3,13 +3,12 @@
 /**
  * print_rev - function that prints a string in reverse
  * @s: string to print
- * Return: Always 0 (success)
+ * Return: (0)
  */
 
 void print_rev(char *s)
 {
 int i;
-
 
 
 i = 0;
@@ -31,7 +30,6 @@ for (i = i - 1 ; i >= 0; i--)
 	_putchar (s[i]);
 
 }
-
 
 
 _putchar ('\n');
