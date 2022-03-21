@@ -4,43 +4,31 @@
  * print_array - prints n elememnts of an array of integers
  * @a: a pointer to an int
  * @n: Return value n
- * Return: void
+ * Return: nothing
  */
 
 void  print_array(int *a, int n)
 {
-int i;
+int x;
+
+ 
+for (x = 0; x < n; x++)
+	  
+	  {
+		      
+		  printf ("%d", a[x]);
+		      
+		  if (x != n - 1)
+			        
+			        {
+						
+					printf (", ");
+					      
+				}
+		    
+	  }
 
 
-
-i = 0;
-
-while (i < n)
-
-{
-
-	printf("%d", a[i]);
-
-
-
-	if (i < n - 1)
-
-	{
-
-		printf(", ");
-
-	}
-
-
-
-	i++;
-
-}
-
-
-
-printf("\n")
-
-;
+printf ("\n");
 
 }
