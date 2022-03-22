@@ -4,40 +4,44 @@
  *puts_half - prints every other character of a string
  *@str: a pointer to an int
  *
- * Return: not
+ * Return: void
  */
 
 void puts_half(char *s)
 {
-
-	int i, last;
-
-	i = 0;
-
-	while (str[i] != '\0')
-
-	{
-
-		i++;
-
-	}
+int i, last;
 
 
 
-	last = (i + 1) / 2;
+i = 0;
 
+while (str[i] != '\0')
 
+{
 
-	for (i = last; str[i]; i++)
-
-	{
-
-		_putchar (str[i]);
-
-	}
-
-
-
-	_putchar ('\n');
+	i++;
 
 }
+
+
+
+last = (i + 1) / 2;
+
+
+
+for (i = last; str[i]; i++)
+
+{
+
+	_putchar (str[i]);
+
+}
+
+
+
+_putchar ('\n');
+
+
+
+}
+
