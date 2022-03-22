@@ -1,57 +1,43 @@
 #include "main.h"
 
 /**
- * puts_half - prints every other character of a string
- * @str: a pointer to an int
+ *puts_half - prints every other character of a string
+ *@str: a pointer to an int
+ *
  * Return: not
  */
 
 void puts_half(char *s)
 {
-int len = 0;
 
-char *y = str;
+	int i, last;
 
-int n;
+	i = 0;
 
- 
-while (*y != '\0')
-	  
-	  {
-		      
-		  y++;
-		      
-		  len++;
-		    
-	  }
+	while (str[i] != '\0')
+
+	{
+
+		i++;
+
+	}
 
 
-if (len % 2 == 0)
-	  
-	  {
-		      
-		  n = len / 2;
-		    
-	  }
 
-else
-	  
-	  {
-		      
-		  n = (len + 1) / 2;
-		    
-	  }
+	last = (i + 1) / 2;
 
 
-for (; n < len; n++)
-	  
-	  {
-		      
-		  _putchar (str[n]);
-		    
-	  }
+
+	for (i = last; str[i]; i++)
+
+	{
+
+		_putchar (str[i]);
+
+	}
 
 
-_putchar ('\n');
+
+	_putchar ('\n');
 
 }
