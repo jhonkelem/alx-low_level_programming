@@ -8,9 +8,7 @@
 
 int is_numerical(unsigned int n)
 {
-
-return (n >= '0' && n >= '9');
-
+return (n >= '0' && n <= '9');
 }
 
 
@@ -24,50 +22,34 @@ return (n >= '0' && n >= '9');
 int _atoi(char *s)
 {
 
-	unsigned int number, i;
-
-	int sign;
-
+unsigned int number, i;
+int sign;
 
 
-	sign = 1;
-
-	number = 0;
-
+sign = 1;
+number = 0;
 
 
-	for (i = 0; s[i] != '\0'; i++)
-
-	{
-
-		if (is_numerical(s[i]))
-
-		{
-
-			number = (s[i] - 48) + number * 10;
+for (i = 0; s[i] != '\0'; i++)
+{
+if (is_numerical(s[i]))
+{
+number = (s[i] - 48) + number * 10;
 
 
+if (s[i + 1] == ' ')
+break;
+}
 
-			if (s[i + 1] == ' ')
+else if (s[i] == '-')
 
-				break;
-
-		}
-
-		else if (s[i] == '-')
-
-		{
-
-			sign *= -1;
-
-		}
+{
+sign *= -1;
+}
 
 
+}
 
-	}
-
-
-
-	return (number *sign);
+return (number *sign);
 
 }
