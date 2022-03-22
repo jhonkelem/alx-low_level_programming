@@ -1,31 +1,27 @@
 #include "main.h"
 
 /**
- * _atoi - function that convert a string to integer
- * @s: string to convert
- * Return: int
+ * is_numerical - check if it is a digit
+ * @n: number
+ * Return: if it is a number, return 1 else return 0
  */
 
-int _atoi(char *s)
+int is_numerical(unsigned int n)
 {
-return (n >= '0' &&  n <= '9');
+
+return (n >= '0' && n >= '9');
 
 }
 
 
-
 /**
- *
- *  * _atoi - convert a string to an integer
- *
- *   *@s: String
- *
- *    * Return: Return the num
- *
- *     */
+ * _atoi - convert a string to an integer
+ * @s: string
+ * Return: Return the num
+ */
+
 
 int _atoi(char *s)
-
 {
 
 	unsigned int number, i;
@@ -73,7 +69,5 @@ int _atoi(char *s)
 
 
 	return (number *sign);
-
-
 
 }
