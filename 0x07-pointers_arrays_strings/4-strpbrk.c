@@ -12,33 +12,25 @@ char *_strpbrk(char *s, char *accept)
 
 {
 
-int j:
+unsigned int i;
 
-while (*s != '\0') /*Declaring WHILE*/
+unsigned int j;
 
-{
 
-j = 0;
-while (accept[j] != '\0')  /*Evaluating *accept*/
 
-{
-
-if (*s == accept[j])
+for (i = 0; s[i] != '\0'; i++)
 
 {
 
-return (s);
+for (j = 0; accept[j] != '\0'; j++)
+										{
+
+										if (s[i] == accept[j])
+										return (&s[i]);
+										}
 
 }
 
-j++; /*add j+1*/
-
-}
-
-s++; /*add s+1*/
-
-}
-
-return (0);
+return (NULL);
 
 }
