@@ -16,6 +16,7 @@ unsigned int i;
 
 i = 0;
 while (i < n) /*declaring while*/
+{
 
 *(dest + i) = *(src + i); /* add 1 position dest and src*/
 i++;
