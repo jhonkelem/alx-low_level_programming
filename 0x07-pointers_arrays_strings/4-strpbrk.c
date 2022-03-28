@@ -1,7 +1,8 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
- * _strpbrk - seraches strings for any sets of bytes
+ * _strpbrk - matches any character specified
  * @s: this is the c string to be scanned
  * @accept: charcter in str1 that matches one of the characters in str2
  * Return: string s that matches any charcter specified in accept
