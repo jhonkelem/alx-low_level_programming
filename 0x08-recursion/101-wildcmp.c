@@ -1,20 +1,17 @@
 #include "main.h"
 
 /**
- *wildcmp - compare two strings and  returns 1
- * @s1: pointer to string params
- * @s2: pointer to string params
- * return: 0
+ * wildcmp - compare two strings
+ * @s1: 1st string to be compared
+ * @s2: second string containing '*' or not
+ * return: return 1 if strings can be considered and 0
  */
 
 
 int wildcmp(char *s1, char *s2)
 
-/* compare strings */
 {
-
 if (*s1 == '\0')
-
 {
 
 if (*s2 != '\0' && *s2 == '*')
