@@ -32,7 +32,6 @@ return (-1);
 /**
  * _sqrt_recursion - function that returns the square root of number
  * @n: integer
- * @i: integer
  * Return: square root
  */
 
