@@ -42,11 +42,11 @@ return (0);
 
 /**
  * is_prime_number - checks whether the num is prime or not
- * @n: given number
+ * @num: given number
  * Return: return 1 prime - return 0 otherwise
  */
 
-int is_prime_number(int n)
+int is_prime_number(int num)
 
 {
 
@@ -56,7 +56,7 @@ iterator = 2;
 
 /* only greater than 2*/
 
-if (n < 2)
+if (num < 2)
 
 {
 
@@ -64,7 +64,7 @@ return (0);
 
 }
 
-if (n == 2)
+if (num == 2)
 
 {
 
@@ -72,6 +72,6 @@ return (1);
 
 }
 
-return (evaluate_n(n, iterator));
+return (evaluate_num(num, iterator));
 
 }
