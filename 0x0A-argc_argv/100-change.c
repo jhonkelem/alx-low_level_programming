@@ -2,8 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - program print the minimum number of coins to make changes for a given amount
- * @argc: argument count for main
+ * main - program print the minimum number of coins to make changes for a given  * @argc: argument count for main
  * @argv: vector to the argument
  * Return: number of coins or 1
  */
@@ -48,7 +47,7 @@ if (amount > 5 && amount < 10)
 {
 
 while (amount >= 5)
-																	amount -= 5, coins++;
+										amount -= 5, coins++;
 
 }
 
@@ -57,7 +56,7 @@ if (amount > 2 && amount < 5)
 {
 
 while (amount >= 2)
-																	amount -= 2, coins++;
+										amount -= 2, coins++;
 
 }
 
