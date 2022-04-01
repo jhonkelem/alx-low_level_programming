@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - program that multuplies two numbers
@@ -12,24 +13,24 @@ int main(int argc, char *argv[])
 
 {
 
-int a, b, result;
+int a, b;
 
-if (argc <= 2)
+if (argc == 3)
 
 {
 
-printf("Error\n");
-return (1);
+a = atoi(argv[1]);
+
+b = atoi(argv[2]);
+
+printf("%d\n", a *b);
+
+return (0);
 
 }
 
-/* atoi convert a string to an int */
-a = atoi(argv[1]);
-b = atoi(argv[2]);
+printf("Error\n");
 
-result = (a*b);
-printf("%d\n", result);
-
-return (0);
+return (1);
 
 }
