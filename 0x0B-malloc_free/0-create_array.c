@@ -13,16 +13,16 @@ char *create_array(unsigned int size, char c)
 
 {
 
-char *str;
+char *pArray;
 unsigned int i;
 
 if (size == 0)
 
 return (NULL);
 
-str = malloc(sizeof(char) * size);
+pArray = malloc(sizeof(char) * size);
 
-if (str == NULL)
+if (pArray == NULL)
 
 return (NULL);
 
@@ -30,11 +30,11 @@ i = 0;
 while (i < size)
 
 {
-										str[i] = c;
+										pArray[i] = c;
 										i++;
 
 }
 
-return (str);
+return (pArray);
 
 }
