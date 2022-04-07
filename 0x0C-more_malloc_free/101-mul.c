@@ -36,9 +36,9 @@ for (i = len1 - 1; i >= 0; i--)
 {
 
 d1 = num1[i] - '0';
-
 carry = 0;
-																	for (j = len2 - 1; j >= 0; j--)
+
+for (j = len2 - 1; j >= 0; j--)
 																	{
 																	d2 = num2[j] - '0';
 																	d1d2 = d1 * d2;
