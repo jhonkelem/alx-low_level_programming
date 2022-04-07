@@ -75,6 +75,9 @@ return (newptr);
 
 }
 
+#include "main.h"
+#include <stdio.h>
+
 /**
  * _memcpy - function that copies memory area
  * @dest: pointer to memmory area
