@@ -34,3 +34,35 @@ _memset(ptr, 0, size * nmemb);
 return (ptr);
 
 }
+
+/**
+ * _memset - functio that fills memory with constant byte
+ * @s: pointer to memory area
+ * @b: constant byte
+ * @n: number of bytes to be filled
+ * Return: memory adress of function
+ */
+
+char *_memset(char *s, char b, unsigned int n)
+
+{
+
+unsigned int i;
+
+char *tmp = s;
+
+for (i = 0; i < n; i++)
+
+{
+
+*s = b;
+
+s++;
+
+										}
+
+s = tmp;
+
+return (s);
+
+}
