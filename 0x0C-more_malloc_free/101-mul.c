@@ -39,24 +39,19 @@ d1 = num1[i] - '0';
 carry = 0;
 
 for (j = len2 - 1; j >= 0; j--)
-																	{
-																	d2 = num2[j] - '0';
-																	d1d2 = d1 * d2;
-																	mul[i + j + 1] += d1d2 % 10;
-																																		carry = d1d2 / 10;
-
-																																		if (mul[i + j + 1] > 9)
-																																		{
-																																		mul[i + j] += mul[i + j + 1] / 10;
-																																		mul[i + j + 1] = mul[i + j + 1] % 10;
-																																																			}
-
-																																		mul[i + j] += carry;
-																																		}
+										{
+										d2 = num2[j] - '0';
+										d1d2 = d1 * d2;
+										mul[i + j + 1] += d1d2 % 10;																	carry = d1d2 / 10;
+										if (mul[i + j + 1] > 9)								
+										{											mul[i + j] += mul[i + j + 1] / 10;
+											mul[i + j + 1] = mul[i + j + 1] % 10;
+																				}
+										mul[i + j] += carry;
+										}
 
 for (k = 0; mul[k] == 0 && k < len; k++)
-
-													
+									
 if (k == len)
 
 _putchar(mul[len - 1] + '0');
@@ -64,9 +59,9 @@ _putchar(mul[len - 1] + '0');
 else
 
 {
-																	for (i = k; i < len; i++)
-																	_putchar(mul[i] + '0');
-																	}
+										for (i = k; i < len; i++)
+										_putchar(mul[i] + '0');
+										}
 
 _putchar('\n');
 
