@@ -14,46 +14,38 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 {
 
-int nameLen, ownerLen, i;
+dog_t *ptr;
 
-dog_t *d1;
-
-d1 = (dog_t *)malloc(sizeof(dog_t));
-
-if (d1 == NULL)
+if (name == NULL || owner == NULL)
 
 return (NULL);
 
-nameLen = ownerLen = 0;
+ptr = malloc(sizeof(dog_t));
 
-while (name[nameLen++])
+if (ptr != NULL)
 
-;
+{
 
-while (owner[ownerLen++])
+ptr->name = _strdup(name);
 
-;
-
-d1->name = malloc(nameLen * sizeof(d1->name));
-
-if (d1->name == NULL)
+if (ptr->name == NULL)
 										{
-										free(d1);
+										free(ptr->name);
+										free(ptr);
 										return (NULL);
+																				}
+										ptr->age = age;
+										ptr->owner = _strdup(owner);
+										if (ptr->owner == NULL)
+										{
+																				free(ptr->name);
+																				free(ptr->owner);
+																				free(ptr);
+																				return (NULL);
+										}
+										return (ptr);
 										}
 
-for (i = 0; i <= nameLen; i++)
-										d1->name[i] = name[i];
-										d1->age = age;
-										d1->owner = malloc(ownerLen * sizeof(d1->owner));
-										if (d1->owner == NULL)
-										{
-										free(d1->name);
-										free(d1);
-										return (NULL);
-										}
-										for (i = 0; i <= ownerLen; i++)
-										d1->owner[i] = owner[i];
-										return (d1);
+return (NULL);
 
 }
