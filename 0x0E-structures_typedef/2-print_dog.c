@@ -5,8 +5,7 @@
 /**
  * print_dog - function that print struct dog
  * @d: pointer argument passed from main
- *
- * Description - function that prints a struct dog
+ * Return: nothing
  */
 
 void print_dog(struct dog *d)
