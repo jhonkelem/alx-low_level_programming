@@ -15,7 +15,11 @@ void print_dog(struct dog *d)
 
 if (d == null)
 
-return;
+;
+
+else
+
+{
 
 if (d->name != NULL)
 
