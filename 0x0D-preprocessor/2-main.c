@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#ifndef __FILE__
-#define __FILE__
-#endif
+
 
 /**
  * main - program that prints the name of the file it was comiled
