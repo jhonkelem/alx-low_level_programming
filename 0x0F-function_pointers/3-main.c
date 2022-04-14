@@ -1,4 +1,3 @@
-#include "function_pointers.h"
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,36 +13,53 @@ int main(int argc, char *argv[])
 
 {
 
-int num1;
+int arg1, arg2, result;
 
-int num2;
+char o;
 
-int calc;
-
-int (*ptr)(int, int);
+int (*func)(int, int);
 
 if (argc != 4)
 
-printf("Error\n"), exit(98);
+{
 
-if (argv[2][1] != '\0')
+printf("Error\n");
 
-printf("Error\n"), exit(99);
+exit(98);
 
-ptr = get_op_func(argv[2]);
+}
 
-if (ptr != NULL)
+arg1 = atoi(argv[1]);
+
+arg2 = atoi(argv[3]);
+
+
+func = get_op_func(argv[2]);
+
+if (!func)
 
 {
-										num1 = atoi(argv[1]);
-										num2 = atoi(argv[3]);
-										calc = (*ptr)(num1, num2);
-										printf("%d\n", calc);
-										}
 
-else
-										printf("Error\n"), exit(99);
+printf("Error\n");
+
+exit(99);
+
+}
+
+o = *argv[2];
+
+if ((o == '/' || o == '%') && arg2 == 0)
+						
+printf("Error\n");
+
+exit(100);
+																	}
+
+result = func(arg1, arg2);
+
+printf("%d\n", result);
 
 return (0);
 
 }
+
