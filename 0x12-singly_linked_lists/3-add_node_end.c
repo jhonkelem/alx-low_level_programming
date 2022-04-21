@@ -5,7 +5,6 @@
  * add_node_end - adds a new node at the end of a list_t list
  * @head: The node at the beginning of the list
  * @str: The string to be contained in the new node
- *
  * Return: The pointer to the new node otherwise, NULL
  */
 
@@ -38,5 +37,6 @@ list_t *add_node_end(list_t **head, const char *str)
 		if (*head == NULL)
 			*head = new_node;
 	}
+
 	return (new_node);
 }
