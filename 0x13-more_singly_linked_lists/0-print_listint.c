@@ -10,36 +10,13 @@
 size_t print_listint(const listint_t *h)
 
 {
+	
+size_t count;
 
-size_t num = 0;
-
-listint_t *p = h ? h->next : NULL;
-
-
-if (h)
-
-{
-
-printf("%d\n", h->n);
-
-num++;
-
-}
-
-if (p)
-
-{
-
-while (p)
-{
-
-printf("%d\n", p->n);
-																	num++;
-																	p = p->next;
-																	}
-
-}
-
-return (num);
-
+	for (count = 0; h != NULL; count++)
+	{
+		printf("%i\n", (*h).n);
+		h = (*h).next;
+	}
+	return (count);
 }
