@@ -10,7 +10,11 @@
 size_t print_listint(const listint_t *h)
 
 {
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> cc8618ed1814d46c4634bb9729bb63c0d9e6e9fa
 	size_t count;
 
 	for (count = 0; h != NULL; count++)
