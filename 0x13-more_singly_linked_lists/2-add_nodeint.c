@@ -24,7 +24,7 @@ size = sizeof(listint_t);
 
 new_node = malloc(size);
 
-	if (new_node)
+if (new_node)
 {
 																	new_node->n = n;
 																	new_node->next = *head;
