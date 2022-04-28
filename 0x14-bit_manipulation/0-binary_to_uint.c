@@ -31,38 +31,3 @@ unsigned int binary_to_uint(const char *b)
 	return (sum);
 }
 
-/**
- * _strlen - function that returns the length of a string
- * @s: parameter defined in main
- *
- * Return: length of string
- */
-
-int _strlen(const char *s)
-{
-	int i = 0;
-
-	while (*s != '\0')
-	{
-		i++;
-		s++;
-	}
-	return (i);
-}
-
-/**
- * _pow_recursion - function that returns x raised to the power of y
- * @x: parameter defined in main, integer
- * @y: parameter defined in main, exponent
- *
- * Return: integer
- */
-
-int _pow_recursion(int x, int y)
-{
-	if (y < 0)
-		return (-1);
-	if (y == 0)
-		return (1);
-	return (x * _pow_recursion(x, y - 1));
-}
