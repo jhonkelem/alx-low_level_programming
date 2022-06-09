@@ -1,99 +1,47 @@
 #include "lists.h"
 
-**
-
- * delete_dnodeint_at_index - function that deletes the node at index index
- *
- *  * of a linked dlistint_t list
- *
- *   * @head: double pointer, pointer to pointer to head node defined in main
- *
- *    * @index: index of the node to be deleted
- *
- *     * Return: 1 if it succeeded, -1 if it failed
- *
- *      */
-
-
-
- int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
-
+/**
+ * delete_dnodeint_at_index - deletes the node at given index of a list
+ * @head: pointer to head of the list
+ * @index: index to delete from, starting from 0
+ * Return: 1 on success or -1 on failure
+ **/
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
+	unsigned int count;
+	dlistint_t *tmp;
 
-		unsigned int count = 0;
-
-			dlistint_t *temp = NULL, *delete = NULL;
-
-
-
-				if (!head || !(*head))
-
-							return (-1);
-
-					temp = *head;
-
-						while (temp != NULL)
-
-								{
-
-											if (count != index)
-
-															temp = temp->next, count++;
-
-													else
-
-																{
-
-																				if (index == 0 && (*head)->next == NULL)
-
-																									*head = NULL, free(temp);
-
-																							else if (index == 0 && (*head)->next != NULL)
-
-																											{
-
-																																delete = *head, *head = (*head)->next;
-
-																																				delete->next = NULL, (*head)->prev = NULL;
-
-																																								free(delete);
-
-																																											}
-
-																										else if (temp->next == NULL)
-
-																														{
-
-																																			delete = temp, temp = temp->prev;
-
-																																							delete->prev = NULL;
-
-																																											temp->next = NULL;
-
-																																															free(delete);
-
-																																																		}
-
-																													else
-
-																																	{
-
-																																						delete = temp, temp = temp->prev;
-
-																																										temp->next = temp->next->next;
-
-																																														temp->next->prev = temp;
-
-																																																		delete->prev = NULL, delete->next = NULL, free(delete);
-
-																																																					}
-
-																																return (1);
-
-																																		}
-
-														}
-
-							return (-1);
-
+	if (*head == NULL || head == NULL)
+	return (-1);
+	if (index == 0)
+	{
+		tmp = *head;
+		*head = (*head)->next;
+		if (*head)
+			(*head)->prev = NULL;
+		free(tmp), tmp = NULL;
+		return (1);
+	}
+	count = 1, tmp = (*head)->next;
+	if (tmp)
+	{
+		while (tmp->next)
+		{
+			if (index == count)
+			{
+				tmp->prev->next = tmp->next;
+				tmp->next->prev = tmp->prev;
+				free(tmp), tmp = NULL;
+				return (1);
+			}
+			count++, tmp = tmp->next;
+		}
+	}
+	if (tmp && index == count)
+	{
+		tmp->prev->next = NULL;
+		free(tmp);
+		return (1);
+	}
+	return (-1);
 }
